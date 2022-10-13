@@ -1,0 +1,108 @@
+.logo{
+    font-size: 33px;
+    font-weight: 300;
+    letter-spacing: 8px;
+    line-height: 43px;
+}
+
+.full-height-page{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar{
+    height: 100%;
+    padding: $contentPadding;
+    width: $sidebarWidth;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    border-right: 1px solid $borderColor;
+    transition: all 0.2s;
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $borderColor;
+        margin-bottom: 10px;
+        padding: 10px 0 20px;
+    }
+}
+.chat{
+    margin-left: $sidebarWidth;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    
+    &__header{
+        background: white;
+        padding: $contentPadding;
+        height: $chatHeaderHeight;
+        display: flex;
+        align-items: center;
+    }
+   
+    &__form{
+       padding: $contentPadding;
+       height: $chatSendFormHeight;
+    }
+}
+
+.messages{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: $contentPadding;
+    &__container{
+        max-height: 100%;
+        overflow: auto;
+    }
+    &__item{
+        display: flex;
+        justify-content: flex-start;
+        &:not(:last-child){
+            margin-bottom: 10px;
+        }
+       
+        &.messages__item--sended{
+            justify-content: flex-end;
+            .message{
+                align-items: flex-end;
+                background: #b572fa;
+                color: white;
+            }
+        }
+    }
+}
+.message{
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    &__time{
+        font-size: 10px;
+        line-height: 12px;
+        opacity: 0.7;
+        margin-top: 4px;
+    }
+}
+
+.panel{
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #00000024;
+    &--300{
+        width: 100%;
+        max-width: 300px;
+    }
+}

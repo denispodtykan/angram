@@ -1,0 +1,10 @@
+<div class="sidebar" [class.active]="showSidebar">
+    <div class="sidebar__header">
+        <p *ngIf="user">{{user.username}}</p>
+        <a class="style-link" (click)="logout()">Выйти</a>
+    </div>
+    <app-chat-list></app-chat-list>
+</div>
+<div class="chat">
+    <router-outlet></router-outlet>
+</div>

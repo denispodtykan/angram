@@ -1,0 +1,18 @@
+.show-on-mobile{
+    display: none;
+}
+@media (max-width: 767px) {
+    .show-on-mobile{
+        display: block;
+    }
+    .sidebar{
+        width: 100%;
+        left: -100%;
+        &.active{
+            left: 0;
+        }
+    }
+    .chat{
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,10 @@
+
+<ng-container *ngIf="chats && chats.length">
+    <app-chat-item 
+        *ngFor="let chat of chats"
+        [fromChatList]="true" 
+        [routerLink]="['/chat', chat.id]"
+        (click)="hideSidebar()"
+        [chat]="chat">
+    </app-chat-item>
+</ng-container>

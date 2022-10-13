@@ -1,0 +1,10 @@
+<div 
+    *ngIf="chat && chatName"
+    class="chat-item"
+    [class.chat-item--link]="fromChatList"
+    >
+        <div class="chat-item__avatar">{{this.chatName.charAt(0)}}</div>
+        <div class="chat-item__container">
+            <div class="chat-item__name">{{this.chatName}}</div>
+        </div>
+</div>

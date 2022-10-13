@@ -1,0 +1,11 @@
+ <div *ngIf="messages && messages.length" class="messages">
+        <div class="messages__container" #messagesObj >
+                <app-message  
+                        *ngFor="let message of messages"
+                        class="messages__item" 
+                        [class.messages__item--sended]="user.id == message.creatorId"
+                        [message]="message"
+                        >
+                </app-message>
+        </div>
+</div>

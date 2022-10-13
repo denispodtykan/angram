@@ -1,0 +1,6 @@
+<div class="chat__form">
+    <div class="send-message-form">
+        <input type="text" [(ngModel)]="message" (keydown.enter)="send()" placeholder="Введите сообщение">
+        <button (click)="send()" [disabled]="!message">Отправить</button> 
+    </div>
+</div>
